@@ -1,0 +1,29 @@
+<?php
+$result="";
+if ($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    $user = $_REQUEST["email"];
+
+    if($user=="")
+    {
+        $result = "Please enter valid email";
+    }
+
+    else
+    {
+        $result = $user;
+    }
+}
+?>
+
+<html>
+<body>
+
+<form action="" method="post">
+Name: <input type="text" name="fname"> <br>
+E-mail: <input type="text" name="email"> <?php echo $result; ?> <br>
+<input type="submit">
+</form>
+
+</body>
+</html>
